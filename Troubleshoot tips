@@ -1,0 +1,72 @@
+Common Issues:*
+
+1. Pod not starting:
+ - Check pod status (`kubectl get pods`)
+ - Verify image name and tag
+ - Inspect pod logs (`kubectl logs`)
+ - Check node resources (CPU, memory)
+2. Deployment not rolling out:
+ - Verify deployment config (`kubectl get deployments`)
+ - Check replica count and availability
+ - Inspect deployment history (`kubectl rollout history`)
+ - Check node affinity/anti-affinity
+3. Service not exposed:
+ - Verify service config (`kubectl get svc`)
+ - Check endpoint configuration
+ - Inspect service logs (`kubectl logs`)
+ - Check network policies
+4. Persistent Volume (PV) issues:
+ - Verify PV config (`kubectl get pv`)
+ - Check storage class configuration
+ - Inspect PV logs (`kubectl logs`)
+ - Check node storage capacity
+
+*Troubleshooting Tools:*
+
+1. `kubectl get` - Retrieve information about resources
+2. `kubectl describe` - Detailed information about resources
+3. `kubectl logs` - Retrieve container logs
+4. `kubectl exec` - Execute commands in containers
+5. `kubectl debug` - Debug containers
+6. `kubectl top` - Resource usage metrics
+7. `kubectl cluster-info` - Cluster information
+
+*Logging and Monitoring:*
+
+1. Kubernetes dashboard
+2. Prometheus and Grafana
+3. Fluentd and Elasticsearch
+4. Logstash and Kibana
+
+*Networking:*
+
+1. Verify pod-to-pod communication
+2. Check service exposure (LoadBalancer, Ingress)
+3. Inspect network policies
+4. Verify DNS resolution
+
+*Security:*
+
+1. Verify RBAC configuration
+2. Check network policies
+3. Inspect pod security context
+4. Verify image security
+
+*Node and Cluster Issues:*
+
+1. Node not ready:
+ - Check node status (`kubectl get nodes`)
+ - Verify node resources (CPU, memory)
+ - Inspect node logs (`kubectl logs`)
+2. Cluster not upgrading:
+ - Verify cluster configuration (`kubectl get cluster`)
+ - Check node compatibility
+ - Inspect upgrade logs (`kubectl logs`)
+
+*Best Practices:*
+
+1. Use meaningful resource names
+2. Monitor resource usage
+3. Implement logging and monitoring
+4. Use network policies
+5. Regularly backup and restore
